@@ -1,0 +1,25 @@
+{
+  "name": "webscraper",
+  "version": "0.0.0",
+  "description": "pulling data from the interwebz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rachelng/webscraper.git"
+  },
+  "keywords": [
+    "webscraper"
+  ],
+  "author": "Rachel",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rachelng/webscraper/issues"
+  },
+  "dependencies": {
+    "request": "~2.32.0",
+    "cheerio": "~0.13.1"
+  }
+}
