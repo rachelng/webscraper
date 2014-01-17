@@ -1,6 +1,7 @@
 var cheerio = require('cheerio');
 var path = require('path');
 var request = require('request');
+var fs = require('fs');
 
 	request('http://substack.net/images/', function (error, response, body) {
 		if (!error && response.statusCode == 200) {
@@ -12,8 +13,10 @@ var request = require('request');
 	    	var code = $(this).find('code').text();
 	    	var absolute = url + imgUrl;
 	    	var fileType = path.extname(absolute)
+	    	var textToAppend = (code + " , " + absolute + " , " + fileType + "\n");
 
-	    	console.log(code + " , " + absolute + " , " + fileType);
+	    	fs.appendFile('images.csv', textToAppend, function (err) {
+	    	})
     	})
     }
 })
